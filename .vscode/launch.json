@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "debug redis",    
+            "type": "cppdbg",                       // 默认这个就好
+            "request": "launch",                    // 默认这个就好
+            "program": "${workspaceFolder}/redis-8.0.0/src/redis-server",  // 编译出来的文件的路径,得包含文件名
+            "args": [                               // 程序运行时的命令行参数。
+                "../redis.conf"
+            ],
+            "stopAtEntry": false,                    // 是否在程序入口处暂停调试。不严谨的讲就是是否在main函数处暂停。
+            "cwd": "${workspaceFolder}/redis-8.0.0/src",            // 调试时程序运行的目录
+            "environment": [],                      // 环境变量设置，一般默认为空就好
+            "externalConsole": false,               // 一般不打开外部控制台
+            "MIMode": "gdb",                        // 调试器模式，"gdb" 表示使用 GNU 调试器。
+            "miDebuggerPath": "/usr/bin/gdb",
+            // "preLaunchTask": "shell",            // 调试前需要执行的任务名称.那当然是先编译啦.
+        },
+    ]
+}
