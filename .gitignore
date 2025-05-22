@@ -1,2 +1,4 @@
 redis-8.0.0/*
 !redis-8.0.0/placeholder
+shunit2-2.1.8/*
+!shunit2-2.1.8/placeholder
